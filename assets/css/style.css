@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+    --primary-color: #BF0404;
+    --secundary-color: #54A102;
+    --dark-color: #730101;
+    --bg-color: #32540D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(95deg, var(--secundary-color), var(--bg-color));
+    color: white;
+    font-size: 1.3rem;
+}
+
+.container {
+    max-width: 450px;
+}
+
+h1 {
+    border-left: 8px solid var(--primary-color);
+    padding-left: 2vh;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10vh 0;
+    border-radius: 16px;
+    font-size: 2rem;
+    margin-top: 5vh;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.option {
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background-color: rgba(96, 96, 96, 0.1);
+    transition: 0.3s ease;
+}
+
+.option:hover {
+    background-color: rgba(199, 199, 199, 0.438);
+    transform: scale(1.1);
+    color: black;
+}
+
+.selected-option {
+    transform: scale(1.1);
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.timer {
+    display: none;
+    margin: 5vh 0;
+    font-size: 4.5rem;
+    color: var(--secundary-color);
+}
+
+.selected-timer {
+    display: block;
+}
+
+.start,
+.pause {
+    border: none;
+    border-radius: 5px;
+    padding: 12px 10px;
+    background-color: var(--secundary-color);
+    font-size: 1.2rem;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.start:hover,
+.pause:hover {
+    background-color: var(--bg-color);
+}
+
+.paused {
+    color: var(--primary-color);
+}
